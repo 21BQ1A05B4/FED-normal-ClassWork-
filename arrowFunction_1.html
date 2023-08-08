@@ -1,0 +1,28 @@
+<!-- write an arrow function named arrayAverage that accepts an array of numbers and returns the average of those numbers-->
+<!-- JOSEPH KORIVI REPO ...! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        const arrayAverage = (a) => {
+            if(a.length > 0) {
+                let sum = 0; let l = a.length;
+                for(let i=0; i<l; i++) {
+                    sum+=a[i];
+                }
+                let avg = Math.floor(sum/l);
+                console.log(avg);
+            } else {
+                console.log(`Given array is empty`);
+            }
+        };
+        arrayAverage([3, 2, 1]);
+        arrayAverage([]);
+    </script>
+</body>
+</html>
