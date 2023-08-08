@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage in HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //  check if the localstorage object is exist or not 
+        if(localStorage) {
+            $(document).ready(function() {
+                $(".save").click(function() {
+                    // Get input name
+                    var firstName = $("#firstName").val();
+                    // store data
+                    localStorage.setItem("firstName", firstName);
+                    alert("Your firstname is saved");
+                });
+                $(".access").click(function() {
+                    // Retrieve data
+                    alert("Hi, " + localStorage.getItem("firstName"));
+                });
+            });
+        } else {
+            alert("Sorry, your browser does not support localStorage");
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="firstName">FirstName: <input type="text" id="firstName"></label>
+        <button type="button" class="save">saveName</button>
+        <button type="button" class="access">GetName</button>
+    </form>
+</body>
+</html>

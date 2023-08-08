@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage</title>
+    <script>
+        function clickCounter() {
+            if(typeof(Storage) !== "undefined") {
+                if(sessionStorage.clickCounter) {
+                    sessionStorage.clickCounter = Number(sessionStorage.clickCount) + 1;
+                } else {
+                    sessionStorage.clickCount = 1;
+                }
+                document.getElementById("result").innerHTML = "you have clicked " + sessionStorage.clickCount + " time(s)";
+            } else {
+                document.getElementById("result").innerHTML = "Sorry Your Browser doesn't support webstorage";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><button type="button" onclick="clickCounter()">Click Me</button></p>
+    <div id="result"></div>
+    <p>click the button to see the counter increase</p>
+</body>
+</html>
