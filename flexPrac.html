@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  JOSEPH KORIVI MADE -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #a8a2a2;
+            display: flex;
+            /* justify-content: flex-end; */
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        header {
+            height: 30vh;
+            width: 80%;
+            border: 2px solid #fff;
+        }
+
+        .menu {
+            height: 70vh;
+            width: 20%;
+            margin-left: 80.2%;
+            align-content: flex-start;
+            border: 2px solid #fff;
+        }
+
+        .article {
+            display: flex;
+            width: 80.4%;
+        }
+
+        .article article {
+            width: 50%;
+            height: 50vh;
+            border: 2px solid #fff;
+            ;
+        }
+
+        footer {
+            height: 10vh;
+            width: 99.7%;
+            border: 2px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            header
+        </header>
+        <div class="article">
+            <article>
+                article
+            </article>
+            <article>
+                article
+            </article>
+        </div>
+        <footer>
+            footer
+        </footer>
+    </div>
+
+</body>
+
+</html>
